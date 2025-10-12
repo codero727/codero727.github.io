@@ -244,12 +244,19 @@ html, body { margin-top: 0 !important; }
 
 
 <style>
-/* Remove any leftover top offset from admin bar or theme padding */
-html { margin-top: 0 !important; }
-body { margin-top: 0 !important; padding-top: 0 !important; }
+/* Nuke any top gap on non-home pages and shrink header height */
+html, body { margin-top: 0 !important; padding-top: 0 !important; }
 :root { --wp-admin--admin-bar--height: 0px !important; --header-h: 0px !important; }
-.site-header { margin-top: 0 !important; top: 0 !important; }
 body:not(.home) { padding-top: 0 !important; }
+/* Collapse header paddings/min-heights added by theme */
+.site-header { position: relative !important; top: 0 !important; margin-top: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+.site-header .header-inner, .site-header .wp-block-group { padding-top: 0 !important; padding-bottom: 0 !important; }
+.site-header .header-row { min-height: 48px !important; }
+/* Remove default block margins at the start of the page after the header */
+.wp-site-blocks > *:first-child { margin-block-start: 0 !important; }
+.wp-site-blocks > header + * { margin-top: 0 !important; }
+/* First cover/group after header: remove top margin/padding */
+.wp-block-cover:first-of-type, .wp-block-group:first-of-type { margin-top: 0 !important; padding-top: 0 !important; }
 </style>
 
 </head>

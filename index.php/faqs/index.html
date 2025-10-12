@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frequently Asked Questions – Alex Luna, MD</title>
+
+  <!-- Minimal, self-contained styles: no WP, no external dependencies -->
+  <style>
+    :root{
+      --cream: #fff0df;
+      --ink: #3B3B3B;
+      --brand: #6d8b9f;
+      --content-max: 1200px;
+      --header-h: 96px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--cream);color:var(--ink);font:300 18px/1.5 "Manrope",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif}
+    h1,h2,h3{font-family:"Playfair Display", Georgia, "Times New Roman", serif; font-weight:400; line-height:1.2; margin:0}
+    a{color:#191919;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Header */
+    .site-header{
+      position:sticky; top:0; z-index:1000;
+      background:rgba(255,240,223,.95);
+      backdrop-filter:saturate(140%) blur(6px);
+      border-bottom:1px solid rgba(0,0,0,.08);
+    }
+    .header-row{
+      max-width:var(--content-max);
+      margin:0 auto;
+      padding:24px clamp(16px,4vw,48px);
+      display:flex; align-items:center; justify-content:space-between; gap:24px;
+      min-height:var(--header-h);
+    }
+    .site-title{font-size:clamp(28px,2.4vw,44px); white-space:nowrap}
+    .nav{display:flex; align-items:center; gap:28px; flex-wrap:nowrap}
+    .cta{display:inline-block; padding:.7rem 1.6rem; border-radius:999px; background:var(--brand); color:#fff; box-shadow: 0 6px 9px rgba(0,0,0,.15)}
+    .cta:hover{opacity:.92; text-decoration:none}
+
+    /* Main */
+    main{max-width:var(--content-max); margin:0 auto; padding: clamp(30px,6vw,70px) clamp(16px,4vw,48px);}
+    .page-hero{
+      background:#6d8b9f; color:#fff;
+      padding: clamp(32px, 8vw, 72px) clamp(16px, 4vw, 48px);
+      margin: 0 0 clamp(30px, 6vw, 60px) 0;
+      border-radius:0;
+    }
+    .page-hero h1{font-size: clamp(40px, 4.5vw, 64px)}
+    .faq-grid{display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: clamp(24px, 4vw, 40px)}
+    .faq{border-top:1px solid rgba(0,0,0,.1); padding-top:18px}
+    .faq h3{font-size: clamp(22px, 2.2vw, 28px); margin: 0 0 8px}
+    .faq p{margin:0}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(0,0,0,.08); margin-top: clamp(40px,8vw,90px)}
+    .footer-inner{
+      max-width:var(--content-max); margin:0 auto;
+      padding: clamp(30px,6vw,50px) clamp(16px,4vw,48px);
+      display:flex; align-items:flex-start; justify-content:space-between; gap:24px;
+      flex-wrap:wrap;
+    }
+    .footer-brand{font-size: clamp(22px, 2.2vw, 28px)}
+    .footer-meta{font-family:"Playfair Display", Georgia, "Times New Roman", serif; font-size:clamp(14px, 1.2vw, 16px)}
+
+    /* Small fade-in (optional) */
+    body{opacity:0; animation:fadein 0.6s ease forwards}
+    @keyframes fadein{from{opacity:0} to{opacity:1}}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER (no WP admin bar, no localhost links) -->
+  <header class="site-header">
+    <div class="header-row">
+      <div class="site-title"><a href="/">Alex Luna, MD</a></div>
+      <nav class="nav" aria-label="Top Menu">
+        <a href="/index.php/about/">About Dr Luna</a>
+        <a href="/index.php/faqs/">FAQs</a>
+        <a class="cta" href="https://alex-luna.clientsecure.me/">Schedule a Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="header-row" style="padding-right:0; padding-left:0; min-height:unset;">
+      <h1>About Dr. Luna</h1>
+    </div>
+  </div>
+
+  <main>
+    <section class="faq-grid">
+      <article class="faq">
+        <h3>Do you accept insurance?</h3>
+        <p>Dr Luna’s practice is fully out-of-network and is not in-network with any commercial insurance plans, but can provide a bill of services to you for submission to your insurance for reimbursement.</p>
+      </article>
+
+      <article class="faq">
+        <h3>What are your fees?</h3>
+        <p>Medication Management (30 min follow up, typically monthly): $350 per session.</p>
+        <p>Psychotherapy +/- Medication Management (45 min follow up, typically weekly): $525 per session.</p>
+        <p>Initial Evaluations: $600 per 45m session. For initial evaluations, I require two 45m sessions for adults or three 45m sessions for children/adolescents (parents, child/adolescents, joint) before accepting you into my practice.</p>
+        <p>Consultations/Second opinions: $600 per 45m session.</p>
+      </article>
+
+      <article class="faq">
+        <h3>Do you treat adults?</h3>
+        <p>Yes. Dr Luna’s training encompassed working with both adults and children/adolescents, which makes him especially suited to support those whose challenges began earlier in life or who are navigating issues related to development, family dynamics, or parenting.</p>
+      </article>
+
+      <article class="faq">
+        <h3>Do you offer virtual or in-person services?</h3>
+        <p>At this time, Dr Luna’s practice offers only virtual services using secure HIPAA compliant telecommunication platforms for individuals residing in New York.</p>
+      </article>
+
+      <article class="faq">
+        <h3>I’d like to discuss further. What’s the next step?</h3>
+        <p>If you feel I may be a good fit for you or your child’s needs, please reach out to me for a 15m free consultation at <a href="mailto:contact@lunapsychmd.com">contact@lunapsychmd.com</a> or send me a message at <a href="tel:+16463973687">(646) 397-3687</a>. I look forward to working together.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><a href="/">Alex Luna, MD</a></div>
+      <div class="footer-meta">
+        (646) 397-3687<br>
+        contact@lunapsychmd.com<br>
+        Adult, Child, and Adolescent Psychiatrist<br>
+        Serving patients in New York
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
