@@ -242,6 +242,16 @@ html, body { margin-top: 0 !important; }
 html, body { margin-top: 0 !important; }
 </style>
 
+
+<style>
+/* Remove any leftover top offset from admin bar or theme padding */
+html { margin-top: 0 !important; }
+body { margin-top: 0 !important; padding-top: 0 !important; }
+:root { --wp-admin--admin-bar--height: 0px !important; --header-h: 0px !important; }
+.site-header { margin-top: 0 !important; top: 0 !important; }
+body:not(.home) { padding-top: 0 !important; }
+</style>
+
 </head>
 
 <body class="wp-singular page-template page-template-page-no-title page page-id-90 wp-embed-responsive wp-theme-twentytwentyfive elementor-default elementor-kit-14">
