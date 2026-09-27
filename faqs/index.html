@@ -115,8 +115,8 @@
 
 
 <title>Psychiatry FAQs | Luna Psychiatry NYC</title>
-<link rel="alternate" type="application/rss+xml" title="Alex Luna, MD » Feed" href="https://lunapsychmd.com/feed/">
-<link rel="alternate" type="application/rss+xml" title="Alex Luna, MD » Comments Feed" href="https://lunapsychmd.com/comments/feed/">
+
+
 
 
 <style id="wp-img-auto-sizes-contain-inline-css">
@@ -288,7 +288,20 @@ a{text-decoration-thickness:1px!important;text-underline-offset:.1em}:where(.wp-
 
   gtag('config', 'G-KWXYF9ERV3');
 </script>
-<script id="wp-importmap" type="importmap">
+<script>
+document.addEventListener('click', function(event) {
+  var link = event.target.closest('a');
+
+  if (link && link.href && link.href.includes('alex-luna.clientsecure.me')) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'appointment_click', {
+        'link_url': link.href,
+        'link_domain': 'alex-luna.clientsecure.me'
+      });
+    }
+  }
+});
+</script><script id="wp-importmap" type="importmap">
 {"imports":{"@wordpress/interactivity":"https://lunapsychmd.com/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1"}}
 </script>
 <link rel="modulepreload" href="https://lunapsychmd.com/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1" id="@wordpress/interactivity-js-modulepreload" fetchpriority="low">
